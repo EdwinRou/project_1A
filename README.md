@@ -123,5 +123,5 @@ Voici les équations en question :
 
 Voici les résultats que ce code permet d'obtenir : 
 
-![result_MNIST](https://user-images.githubusercontent.com/74186183/196456419-cc9e57c9-8004-4549-bbcc-1c516e022fe7.png)
+
 ![result_MNIST](https://user-images.githubusercontent.com/74186183/196457279-72bbf2e6-f856-4754-a328-4f6cc64fa73b.jpg)
