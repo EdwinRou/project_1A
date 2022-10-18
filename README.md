@@ -119,3 +119,8 @@ Voici les équations en question :
 
 ![back_propagtion](https://user-images.githubusercontent.com/74186183/196455899-298b42c3-d9a8-4ac6-bad9-46895d1d07e9.png)
 
+
+
+Voici les résultats que ce code permet d'obtenir : 
+
+![result_MNIST](https://user-images.githubusercontent.com/74186183/196456419-cc9e57c9-8004-4549-bbcc-1c516e022fe7.png)
