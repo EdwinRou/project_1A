@@ -29,7 +29,7 @@ Il existe également un validation_data utilisé de manière intermédiaire dans
 
 Le neuronne utilisé est classique.
 
-Pour une liste d'entrée  $ (e_{1},e_{2},e_{3},...,e_{n})$, Il définit en entier $z$ tel que 
+Pour une liste d'entrée  $ (e_{1},e_{2},e_{3},...,e_{n}) $, Il définit en entier $z$ tel que 
 
 $z = w_{1}×e_{1} + w_{2}×e_{2} + ... + w_{n}×e_{n} + b $
 
