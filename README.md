@@ -5,58 +5,25 @@ Par Edwin Roussin et Alexandre Partensky.
 
 
 
-La base de données MNIST est un ensemble d'image de chiffre de résolution 28x28, chacune accompagné de leur valeur représentée sous forme d'un entier ou d'un vecteur. Après avoir téléchargé la base de données, nous l'ouvrons à l'aide d'un code que nous avons repris sur Github.
+## Gestion de nos données
 
-Lien base MNIST : http://yann.lecun.com/exdb/mnist/
+ La base de données MNIST est un ensemble d'image de chiffre de résolution 28x28, chacune accompagné de leur valeur représentée sous forme d'un entier ou d'un vecteur. Après avoir téléchargé la base de données, nous l'ouvrons à l'aide d'un code que nous avons repris sur Github.
 
-Lien github : https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/src/mnist_loader.py
+> Lien base MNIST : http://yann.lecun.com/exdb/mnist/
 
-Les images sont triées selon deux groupes. Le premier, appelé "training_data" permet d'entrainer l'algorithme de machine learning à reconnaître les images. Le second, "test_data" permet de tester la capacité de l'algorithme à reconnaître des images, une fois que celui-ci à été entrainé sur les images d'entraînements. Ces deux objets sont importés sous forme de liste de couple, chaque couple représentant une image avec l'ensemble des valeurs des pixels pour la première composante et la traduction de la valeur de l'image pour la seconde composante. Pour le test_data, la valeur de chaque image (deuxième composante du tuple) est un nombre tandis que c'est une liste sous la forme  np.array([0,1,0,0,0,0,0,0,0,0])  pour le trainig_data. La fonction "vectorized_result" permet de passer de la première représentation à la deuxième si besoin.
 
+
+> Lien github : https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/src/mnist_loader.py
+
+
+
+  Les images sont triées selon deux groupes. Le premier, appelé "training_data" permet d'entrainer l'algorithme de machine learning à reconnaître les images. Le second, "test_data" permet de tester la capacité de l'algorithme à reconnaître des images, une fois que celui-ci à été entrainé sur les images d'entraînements. Ces deux objets sont importés sous forme de liste de couple, chaque couple représentant une image avec l'ensemble des valeurs des pixels pour la première composante et la traduction de la valeur de l'image pour la seconde composante. Pour le test_data, la valeur de chaque image (deuxième composante du tuple) est un nombre tandis que c'est une liste sous la forme $np.array([0,1,0,0,0,0,0,0,0,0])$ pour le trainig_data. La fonction "vectorized_result" permet de passer de la première représentation à la deuxième si besoin.
+  
 Il existe également un validation_data utilisé de manière intermédiaire dans la phase d'entrainement qui comporte moins de données que le test_data. Il est surtout utile pour calibrer les hyperparamètres du réseau, prévenir l'over-fitting et mettre en place des early-stopping par exemple.
 
 
 
 
-
-
-## Description du type de neuronne utilisé
-Le neuronne utilisé est classique.
-
-Pour une liste d'entrée (e1,e2,e3,...,en), Il définit en entier z tel que
-
-z=w1×e1+w2×e2+...+wn×en+b
-
-avec (w1,w2,w3,...,wn) l'ensemble des "poids" associé à un neuronne et b le biais du neuronne.
-
-On compose ensuite z par la fonction d'activation sigmoid définie ci-dessus. Le neuronne renvoie alors sigmoid(z).
-
-Pour une couche de neuronnes, prenant en entrée E=(e1,e2,e3,...,en), on peut calculer la valeur de sortie sous forme d'un vecteur A tel que
-
-A=sigmoid(Z)=W⋅E+B
-
-avec A est le vecteur d'activation de la couche en question, W la matrice des poids des neuronnes de la couche, dont chaque ligne est l'ensemble des poids d'un seul neuronne et B le vecteur des biais des neuronnes de la couche
-
-A=sigmoid(Z) est le vecteur de sortie de la couche de neuronne dont les composantes sont (sigmoid(z1),sigmoid(z2),...,sigmoid(zn).
-
-Description des attributs :
-La classe contient 6 attributs :
-
-num_layers est le nombre de couche de neuronnes de notre réseau
-
-Par soucis de simplicité, nous décidons d'utiliser uniquement un réseau de neuronnes avec 3 couches, une pour les entrées, une au milieu et une pour les sorties.
-
-sizes est un tableau de taille num_layers et dont la i-ème case est le nombre de neuronnes dans la i-ème couche du réseau.
-
-biaises est la liste des vecteurs des biais de chaque couche de neuronnes.
-
-weights est la liste des matrices des poids de chaque couche de neuronnes.
-
-train_cost est la liste des costs sur le train set lors de l'entraînements.
-
-test_cost est la liste des costs sur le test set lors de l'entraînement
-
-acc la liste donnant l'accuracy du réseau sur le test set au fur et à mesure de l'entraînement
 
 ## Description du type de neuronne utilisé
 
