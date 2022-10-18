@@ -115,5 +115,6 @@ Séparer en différents lots permet d'éviter que l'algorithme apprenne à chaqu
  
  La méthode utilisé s'appelle backpropagation. L'idéee générale est de d'abord calculer les dérivées partielles de C (fonction coût quelconque) par rapport au biais et poids de la dernière couche, puis grâce à ces valeurs de calculer les valeurs de la couche précendete etc jusqu'à tous les connaîtres.
 
-
+Voici les équations en question :
+![back_propagtion](https://user-images.githubusercontent.com/74186183/196455899-298b42c3-d9a8-4ac6-bad9-46895d1d07e9.png)
 
