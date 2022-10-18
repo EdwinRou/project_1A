@@ -127,4 +127,4 @@ Voici les résultats que ce code permet d'obtenir :
 ![result_MNIST](https://user-images.githubusercontent.com/74186183/196457279-72bbf2e6-f856-4754-a328-4f6cc64fa73b.jpg)
 
 
-![result_MNIST_2](https://user-images.githubusercontent.com/74186183/196495468-e70d2ca1-e871-4eca-84bf-b3d4f5054c00.png)
+![result_MNIST_2](https://user-images.githubusercontent.com/74186183/196495663-fa81c79c-2f23-4eb7-8212-94ba9509e390.jpg)
